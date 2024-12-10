@@ -1,0 +1,86 @@
+//-
+  page index
+extends ./pugs/layout.pug
+
+block vars
+  - var navIndex = 1 //- 导航索引
+
+block main
+  section.section.section-hero
+    .container
+      .card.border-0.rounded-5.bg-dark.text-light(data-aos="fade-up")
+        img.w-100.object-fit-cover(src="images/aboutus/hero.png" alt="About us")
+        .card-img-overlay.d-flex.rounded-5
+          h3.mx-auto.my-auto.ff-baloo.fs-3 About Us
+
+  section.section.section-story.text-primary
+    .container
+      .row
+        .col-lg-10.offset-lg-1
+          .row.row-cols-1.row-cols-lg-2.g-3.g-md-4.g-lg-5
+            .col.order-lg-2
+              h3.mb-3.mb-md-4.mb-lg-5.fs-3.fw-semibold.text-capitalize(data-aos="fade-up")
+                | Our story
+
+              p
+                | Tutu Travel Limited began in 2021 with a simple dream: to
+                | make travel easy, affordable, and stress-free for everyone.
+                | What started as a small idea has grown into a global travel
+                | agency with branches in Nigeria, China, and beyond, helping
+                | people turn their travel dreams into reality.
+              p
+                | At Tutu Travel Limited, we know that a great trip isn’t just
+                | about where you go but how you get there. That’s why we’ve
+                | made it our mission to take the hassle out of travel planning
+                | , offering unbeatable ticket prices and a team that’s always
+                | ready to go the extra mile for you.
+              p
+                | From finding last-minute deals to personalizing every trip to
+                | your needs, we’ve built our reputation on exceptional service
+                | and a commitment to making every journey smooth and enjoyable
+                | . Whether it’s a family vacation, a corporate trip, or a
+                | quick getaway, we handle the details so you can focus on the
+                | experience.
+              p
+                | After all, travel is more than just moving from one place to
+                | another, it’s about creating
+                | memories, exploring the unknown, and feeling at home wherever
+                | you go. At Tutu Travel Limited, we’re here to help you every
+                | step of the way.
+
+            .col
+              .row.row-cols-1.row-cols-lg-2.g-3.align-items-center
+                .col
+                  .row
+                    .col-10.offset-1.col-lg-12.offset-lg-0.d-flex.flex-lg-column.gap-3
+                      .ratio.ratio-3x4
+                        img.object-fit-cover.rounded-top-5.rounded-top-lg-0(src="images/aboutus/story-1.png")
+                      .ratio.ratio-3x4
+                        img.object-fit-cover.rounded-top-5.rounded-top-lg-0(src="images/aboutus/story-2.png")
+                .col.d-none.d-lg-block
+                  .ratio.ratio-3x4
+                    img.object-fit-cover(src="images/aboutus/story-3.png")
+
+  section.section.section-book
+    .container
+      .card.card-book(data-aos="fade-up")
+        .card-body
+          .d-flex.align-items-center.gap-3.gap-md-4.gap-lg-5
+            .flex-shrink-0.order-lg-1
+              a.btn.btn-warning.btn-lg-lg.rounded-pill.px-lg-4.text-light(href="request.html")
+                | Book Now And Save
+            .flex-fill
+              h4.card-title.mb-0.fw-bold.text-capitalize
+                | Helping you book affordable flight ticket with ease
+          hr
+          .row.row-cols-3.g-2.g-md-3.g-lg-5
+            .col.d-flex.align-items-center.gap-1.gap-md-3.gap-lg-4
+              h4.card-count.mb-0.fw-bold.text-warning 10k+
+              p.card-text.mb-0 Flight ticket #[br] Sold
+            .col.d-flex.align-items-center.gap-1.gap-md-3.gap-lg-4
+              h4.card-count.mb-0.fw-bold.text-warning 650+
+              p.card-text.mb-0 Satisfied #[br] Customer
+            .col.d-flex.align-items-center.gap-1.gap-md-3.gap-lg-4
+              h4.card-count.mb-0.fw-bold.text-warning 4.7*
+              p.card-text.mb-0 Average Client #[br] Ratings
+

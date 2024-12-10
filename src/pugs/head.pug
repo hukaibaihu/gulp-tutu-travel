@@ -1,0 +1,37 @@
+//- header.pug
+
+header.header.layout-header(class=navBarTranslucent ? 'header-translucent translucent' : '')
+  nav.navbar.navbar-expand-lg
+    .container
+      a.navbar-brand.py-0(href="index.html")
+        img.logo(src="images/logo.png")
+        img.logo-white(src="images/logo-white.png")
+
+      button.navbar-toggler(type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+
+      #offcanvasNavbar.offcanvas.offcanvas-start(tabindex="-1" aria-labelledby="offcanvasNavbarLabel")
+        .offcanvas-header.p-4
+          h5#offcanvasNavbarLabel.offcanvas-title
+            img(src="images/logo.png" height="40")
+          button.btn-close(type="button" data-bs-dismiss="offcanvas" aria-label="Close")
+        .offcanvas-body.px-4.px-lg-0
+          ul.navbar-nav.mb-5.mb-lg-0.mx-lg-auto
+            each nav, idx in menus
+              li.nav-item
+                if idx === navIndex
+                  a.nav-link.active(aria-current="page" href=nav.url)= nav.text
+                else
+                  a.nav-link(href=nav.url)= nav.text
+
+          .d-flex.mb-4.mb-lg-0.mx-auto.ms-lg-0.me-lg-3
+            a.btn.btn-send.d-inline-flex.align-items-center.m-auto.my-xl-0.px-xl-4.rounded-pill(href="request.html")
+              | Send a request
+
+          .nav.justify-content-center
+            a.nav-link.navbar-text(href="https://ng.linkedin.com/company/tutu-travel-limited" target="_blank")
+              i.bi.bi-linkedin
+            a.nav-link.navbar-text(href="https://www.instagram.com/tututravelltd/profilecard/?igsh=dTR2YmFpaThpZnk1" target="_blank")
+              i.bi.bi-instagram
+            a.nav-link.navbar-text(href="https://www.facebook.com/share/1VPdfBopMV/?mibextid=LQQJ4d" target="_blank")
+              i.bi.bi-facebook

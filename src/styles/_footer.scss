@@ -1,0 +1,33 @@
+footer.footer {
+  --bs-dark-rgb: 16, 20, 51;
+  --bs-link-color-rgb: 255, 255, 255;
+
+  --footer-padding-t: 50px;
+  --footer-padding-y: 20px;
+  --footer-title-font-size: 24px;
+
+  padding-top: var(--footer-padding-t);
+  padding-bottom: var(--footer-padding-y);
+
+  .footer-title {
+    font-size: var(--footer-title-font-size);
+  }
+
+  .text-primary-200 {
+    color: #B8C0FF;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer.footer {
+    --footer-padding-t: 70px;
+    --footer-title-font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  footer.footer {
+    --footer-padding-t: 90px;
+    --footer-title-font-size: 40px;
+  }
+}

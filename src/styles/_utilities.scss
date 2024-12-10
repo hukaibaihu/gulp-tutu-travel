@@ -1,0 +1,21 @@
+.ff-baloo {
+  font-family: 'baloo-bhai' !important;
+}
+
+.ratio-3x4 {
+  --bs-aspect-ratio: 133.33333%;
+}
+
+@media screen and (min-width: 992px) {
+  .btn-group-lg-lg > .btn, .btn-lg-lg {
+    --bs-btn-padding-y: 0.5rem;
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-font-size: 1.25rem;
+    --bs-btn-border-radius: var(--bs-border-radius-lg);
+  }
+
+  .rounded-top-lg-0 {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+}

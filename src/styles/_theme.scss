@@ -1,0 +1,44 @@
+@use 'variables' as *;
+
+:root {
+  --bs-primary: #{$color-primary};
+  --bs-primary-rgb: #{$color-primary-rgb};
+  --bs-danger: #{$color-danger};
+  --bs-danger-rgb: #{$color-danger-rgb};
+  --bs-success: #{$color-success};
+  --bs-success-rgb: #{$color-success-rgb};
+  --bs-warning: #{$color-warning};
+  --bs-warning-rgb: #{$color-warning-rgb};
+
+  --bs-body-font-family: Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --swiper-theme-color: var(--bs-primary);
+  --swiper-navigation-size: 34px;
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-bullet-inactive-opacity: .7;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-warning {
+  background-color: var(--bs-warning);
+  border-color: var(--bs-warning);
+}
+
+@media screen and (min-width: 992px) {
+  :root {
+    --bs-body-font-size: 1.125rem;
+  }
+}

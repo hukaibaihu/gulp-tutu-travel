@@ -1,0 +1,240 @@
+//-
+  page index
+extends ./pugs/layout.pug
+
+block vars
+  - var navIndex = 0 //- 导航索引
+  - var navBarTranslucent = true // 开启沉浸式导航栏
+
+block styles
+  // build:css styles/home.css
+  link(rel="stylesheet" href="styles/home.css")
+  // endbuild
+
+block main
+  section.section.section-hero.card.vh-100.py-0.border-0.rounded-0.bg-dark.text-light
+    img.h-100.object-fit-cover(src="images/home/hero.png" alt="Tutu Travel")
+    .card-img-overlay.d-flex.flex-column
+      .container.pt-5.my-auto
+        .row
+          .col-12.col-md-10.col-lg-8.col-xl-6.offset-md-1.offset-lg-2.offset-xl-3.text-md-center
+            h2.ff-baloo.fs-1(data-aos="fade-up") BOOK YOUR NEXT
+            h3.ff-baloo.fs-1.mb-4.mb-lg-5(data-aos="fade-up" data-aos-delay="100")
+              | Flight ticket in minutes
+
+            p.mb-5.fs-5(data-aos="fade-up" data-aos-delay="300")
+              | Find unbeatable deals on local and international flights. Easy,
+              | fast, and reliable service. Don’t miss an affordable Tickets to
+              | Your Favorite Destinations!
+
+            p.mb-0(data-aos="fade-up" data-aos-delay="500")
+              a.btn.btn-warning.btn-lg.rounded-pill.text-light.px-4(href="request.html")
+                | Book Now And Save
+
+  section.section.section-who.text-md-center.text-primary
+    .container
+      p #[br]
+      .row
+        .col-12.col-xl-10.offset-xl-1
+          .mb-3.mb-md-4.mb-lg-5
+            h3.mb-0.fs-3.fw-semibold.text-capitalize(data-aos="fade-up")
+              | Who are we?
+
+          div(data-aos="fade-up" data-aos-delay="200")
+            p
+              | Welcome to Tutu Travel Limited – where your journey begins, and
+              | the sky is never the limit!
+            p
+              | Travel isn’t just about getting from one place to another. It’s
+              | about the stories you create along the way.
+          p #[br]
+
+          div(data-aos="fade-up" data-aos-delay="400")
+            p
+              | As a proudly IATA Certified and NANTA Registered travel company
+              | , we’re here to make those stories extraordinary.
+            p
+              | Whether you’re exploring for adventure or flying for business,
+              | we craft personalized travel experiences that cater to the
+              | needs of Nigerians and our friends around the globe.
+            p.d-none.d-md-block
+              span.bi.bi-triangle-fill.d-inline-block.text-warning(style="transform:rotate(180deg)")
+          p #[br]
+
+  section.section.section-gellary.text-primary
+    .container
+      .swiper.mb-3.mb-md-4.mb-lg-5(data-aos="fade-up")
+        .swiper-wrapper
+          each url in ['gallery-1.png', 'gallery-2.png', 'gallery-3.png', 'gallery-1.png', 'gallery-2.png', 'gallery-3.png']
+            .swiper-slide.ratio.ratio-3x4
+              a(data-fancybox="gellary" href=`images/home/${url}`)
+                img.w-100.h-100.object-fit-cover(src=`images/home/${url}`)
+        .swiper-navigation
+          a.swiper-button-prev
+          a.swiper-button-next
+        .swiper-pagination
+
+      .row
+        .col-12.col-md-10.col-lg-8.col-xl-6.offset-md-1.offset-lg-2.offset-xl-3
+          .text-md-center(data-aos="fade-up")
+            p.mb-1
+              | Picture this: A world where travel is no longer a luxury but a
+              | lifestyle.
+            p
+              | At Tutu Travel, our vision is to lead the charge in Nigeria,
+              | becoming the go-to travel agency that offers affordable,
+              | convenient, and reliable travel options to connect you with the
+              | destinations of your dreams.
+
+  section.section.section-mission.text-primary
+    .container
+      .mb-3.mb-md-4.mb-lg-5.text-md-center
+        h3.mb-0.fs-3.fw-semibold.text-capitalize(data-aos="fade-up")
+          | We believe travel is for everyone, and we’re here to prove it.
+
+      .row.row-cols-1.row-cols-md-2.g-3.g-md-4.g-lg-5.mb-3.mb-md-4.mb-lg-5
+        .col
+          figure.mission-figure(data-aos="fade-up" data-aos-delay="100")
+            .ratio.ratio-4x3
+              img.object-fit-cover(src="images/home/mission-1.png" alt="From budget-friendly flight tickets")
+            figcaption From budget-friendly flight tickets
+        .col
+          figure.mission-figure.mission-figure-right(data-aos="fade-up" data-aos-delay="300")
+            .ratio.ratio-4x3
+              img.object-fit-cover(src="images/home/mission-2.png" alt="to personalized customer support")
+            figcaption to personalized customer support
+
+      .row
+        .col-12.col-md-10.col-lg-8.col-xl-6.offset-md-1.offset-lg-2.offset-xl-3
+          .text-md-center(data-aos="fade-up")
+            p
+              | We’ve made it our mission to bring the world closer to you.
+              | Using cutting-edge technology and strategic partnerships with
+              | top airlines, we’re making travel as seamless as swiping right
+              | on your favourite app.
+
+  section.section.section-why.text-primary
+    .container
+      .mb-3.mb-md-4.mb-lg-5.text-md-center
+        h3.mb-2.mb-lg-3.fs-3.fw-semibold.text-capitalize(data-aos="fade-up")
+          | Why choose us?
+        h5.mb-0(data-aos="fade-up" data-aos-delay="100") Here’s the deal
+
+      p.mb-3.mb-md-4.mb-lg-5(data-aos="fade-up" data-aos-delay="150")
+        img.w-100(src="images/home/why.png" alt="Here's the deal")
+
+      .row
+        .col-12.col-lg-10.offset-lg-1
+          .text-md-center(data-aos="fade-up")
+            p.fst-italic
+              | “We’re more than a travel agency. We’re your travel partner,
+              | your dream enabler, and your guide to a world waiting to be
+              | explored. So, whether you’re flying to Paris for a romantic
+              | escape, jetting off to Dubai for a business meeting, or
+              | exploring the wonders of Africa, Tutu Travel is here to take
+              | you there – one flight at a time. Let’s make your next trip
+              | unforgettable. Ready? Welcome aboard!”
+
+  section.section.section-book
+    .container
+      .card.card-book(data-aos="fade-up")
+        .card-body
+          .d-flex.align-items-center.gap-3.gap-md-4.gap-lg-5
+            .flex-shrink-0.order-lg-1
+              a.btn.btn-warning.btn-lg-lg.rounded-pill.px-lg-4.text-light(href="request.html")
+                | Book Now And Save
+            .flex-fill
+              h4.card-title.mb-0.fw-bold.text-capitalize
+                | Helping you book affordable flight ticket with ease
+          hr
+          .row.row-cols-3.g-2.g-md-3.g-lg-5
+            .col.d-flex.align-items-center.gap-1.gap-md-3.gap-lg-4
+              h4.card-count.mb-0.fw-bold.text-warning 10k+
+              p.card-text.mb-0 Flight ticket #[br] Sold
+            .col.d-flex.align-items-center.gap-1.gap-md-3.gap-lg-4
+              h4.card-count.mb-0.fw-bold.text-warning 650+
+              p.card-text.mb-0 Satisfied #[br] Customer
+            .col.d-flex.align-items-center.gap-1.gap-md-3.gap-lg-4
+              h4.card-count.mb-0.fw-bold.text-warning 4.7*
+              p.card-text.mb-0 Average Client #[br] Ratings
+
+  section.section.section-what.text-primary
+    .container
+      .mb-3.mb-md-4.mb-lg-5.text-md-center
+        h3.mb-0.fs-3.fw-semibold.text-capitalize(data-aos="fade-up")
+          | Hear what our happy travelers are saying!
+
+      .row.row-cols-1.row-cols-md-2.row-cols-lg-3.g-3.g-md-4.g-lg-5.justify-content-center
+        .col
+          .card.card-saying.h-100(data-aos="fade-up" data-aos-delay="100")
+            .ratio.ratio-4x3
+              img.card-img(src="images/home/what-1.png")
+            .card-body
+              p.card-text.fst-italic
+                | “We booked Our ticket to China in just 5 minutes. The process
+                | was seamless and the ticket was very affordable!”
+            .card-footer.d-flex.align-items-center.gap-5
+              span.flex-fill.fst-italic.text-capitalize Group travellers
+
+              span.flex-shrink-0
+                i.bi.bi-star-fill.text-warning
+                span.ms-1 4.6
+        .col
+          .card.card-saying.h-100(data-aos="fade-up" data-aos-delay="200")
+            .ratio.ratio-4x3
+              img.card-img(src="images/home/what-2.png")
+            .card-body
+              p.card-text.fst-italic
+                | “Amazing service and support. I got the best deal for my
+                | flight to London.”
+            .card-footer.d-flex.align-items-center.gap-5
+              span.flex-fill.fst-italic.text-capitalize Dr ade o.
+
+              span.flex-shrink-0
+                i.bi.bi-star-fill.text-warning
+                span.ms-1 4.6
+        .col
+          .card.card-saying.h-100(data-aos="fade-up" data-aos-delay="300")
+            .ratio.ratio-4x3
+              img.card-img(src="images/home/what-3.png")
+            .card-body
+              p.card-text.fst-italic
+                | “They handled everything perfectly. Highly recommend this
+                | agency!”
+            .card-footer.d-flex.align-items-center.gap-5
+              span.flex-fill.fst-italic.text-capitalize Group travellers
+
+              span.flex-shrink-0
+                i.bi.bi-star-fill.text-warning
+                span.ms-1 4.6
+
+  section.section.section-partners.text-primary
+    .container
+      .mb-3.mb-md-4.mb-lg-5.text-md-center
+        h3.mb-0.fs-3.fw-semibold.text-capitalize(data-aos="fade-up")
+          | Our Partners
+
+
+  section.section.section-deal.d-none.d-md-block
+    .container
+      .card.card-deal.flex-row.gap-xl-5.overflow-hidden(data-aos="fade-up")
+        .card-body
+          .mb-4
+            h3.mb-2.fs-3.fw-semibold.text-capitalize(data-aos="fade-up")
+              | Don’t miss a great deal
+            p.mb-0
+              | Stay one step ahead. Find the best value travel with the latest
+              | deals, tips and news.
+          form(autocomplete="off")
+            .d-flex.flex-column.flex-lg-row.gap-3.gap-lg-4.gap-xl-5
+              .col
+                input.form-control.form-control-lg(type="email" placeholder="Enter email address")
+              .col
+                button.btn.btn-primary.btn-lg.px-4 Subscribe
+        .d-flex
+          img.w-100.mt-auto.mb-3(src="images/home/airplane.png")
+
+block scripts
+  // build:js scripts/home.js
+  script(src="scripts/home.js")
+  // endbuild

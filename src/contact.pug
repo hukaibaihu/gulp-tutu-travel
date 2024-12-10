@@ -1,0 +1,83 @@
+//-
+  page index
+extends ./pugs/layout.pug
+
+block vars
+  - var navIndex = 4 //- 导航索引
+
+block main
+  section.section.section-hero
+    .container
+      .card.border-0.rounded-5.bg-dark.text-light(data-aos="fade-up")
+        img.w-100.object-fit-cover(src="images/aboutus/hero.png" alt="Contact")
+        .card-img-overlay.d-flex.rounded-5
+          h3.mx-auto.my-auto.ff-baloo.fs-3
+            | Leave Your Details to Secure the Best Flight Prices!
+
+  section.section.section-contact.text-primary
+    .container
+      .row.g-3.g-md-4.g-lg-5
+        .col-12.col-md-6.col-xl-5
+          p.d-flex.mb-3.mb-md-4(data-aos="fade-up")
+            span.flex-shrink-0
+              i.bi.bi-geo-alt-fill.fs-4.text-danger
+            span.flex-fill.ms-2.mt-1
+              | Corporate Office: 202 Golden Gate Building, Kayode Animashaun,
+              | Lekki Phase 1, Lagos, Nigeria
+
+          p.d-flex.mb-3.mb-md-4(data-aos="fade-up")
+            span.flex-shrink-0
+              i.bi.bi-telephone-fill.fs-4.text-warning
+            span.flex-fill.ms-2.mt-1.d-flex.flex-wrap.gap-3
+              span +234 9035119068
+              span +234 09120223483
+              span +234 8160915493
+
+          p.d-flex.mb-3.mb-md-4(data-aos="fade-up")
+            span.flex-shrink-0
+              i.bi.bi-envelope-fill.fs-4.text-warning
+            span.flex-fill.ms-2.mt-1.d-flex.flex-wrap.gap-3
+              span Info@flywithtutu.com
+              span Helpdesk@flywithtutu.com
+
+          p #[br]
+
+          p.d-none.d-md-block(data-aos="fade-up")
+            img.w-100(src="images/map.jpg" alt="map")
+
+        .col-12.col-md-6.col-xl-5.offset-xl-2
+          h3.mb-3.mb-md-4.mb-lg-5.fs-3.fw-semibold.text-capitalize(data-aos="fade-up")
+            | Send a request
+
+          form(autocomplete="off")
+            .mb-3(data-aos="fade-up")
+              label.form-label Your Name (required)
+              input.form-control.form-control-lg(type="text" name="name" placeholder="")
+
+            .mb-3(data-aos="fade-up")
+              label.form-label Your Email (required)
+              input.form-control.form-control-lg(type="email" name="email" placeholder="")
+
+            .mb-3(data-aos="fade-up")
+              label.form-label Travel Destination (from where to where)
+              textarea.form-control.form-control-lg(name="destination" placeholder="" rows="3")
+
+            .mb-3(data-aos="fade-up")
+              label.form-label Travel Date
+              textarea.form-control.form-control-lg(name="date" placeholder="" rows="3")
+
+            .mb-3(data-aos="fade-up")
+              label.form-label Any other request?
+              textarea.form-control.form-control-lg(name="other" placeholder="" rows="5")
+
+            p #[br]
+
+            p(data-aos="fade-up")
+              button.btn.btn-warning.btn-lg.px-4.rounded-pill.text-light.shadow(type="submit")
+                | Send Request
+
+  section.section.section-map.d-md-none
+    .container
+      p(data-aos="fade-up")
+        img.w-100(src="images/map.jpg" alt="map")
+

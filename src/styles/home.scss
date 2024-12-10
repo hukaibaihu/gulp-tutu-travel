@@ -1,0 +1,97 @@
+.mission-figure {
+  --figure-spacer: 30%;
+  --caption-width: 180px;
+  --caption-spacer-x: 10%;
+  --caption-spacer-y: 15%;
+
+  position: relative;
+
+  figcaption {
+    position: absolute;
+    padding: 6px 10px;
+    width: var(--caption-width);
+    font-weight: 500;
+    background-color: #F3FBFF;
+  }
+
+  &:not(&-right) {
+    padding-right: var(--figure-spacer);
+
+    figcaption {
+      top: var(--caption-spacer-y);
+      right: var(--caption-spacer-x);
+    }
+  }
+
+  &-right {
+    padding-left: var(--figure-spacer);
+
+    figcaption {
+      left: var(--caption-spacer-x);
+      bottom: var(--caption-spacer-y);
+    }
+  }
+}
+
+.card-saying {
+  --bs-card-color: #80849F;
+  --bs-card-spacer-x: 0;
+  --bs-card-cap-bg: unset;
+  --bs-card-border-width: 0;
+  --bs-card-border-radius: 0;
+  --bs-card-font-size: 11px;
+  --bs-card-cap-padding-x: 0;
+  --bs-card-cap-padding-y: 0;
+  --bs-card-cap-color: var(--bs-card-color);
+  --bs-card-img-radius: 24px;
+  --bs-card-img-stroke-width: 5px;
+  --bs-card-img-stroke-color: #E6EAF3;
+
+  font-size: var(--bs-card-font-size);
+
+  .card-img {
+    border-radius: var(--bs-card-img-radius);
+    border: var(--bs-card-img-stroke-width) solid var(--bs-card-img-stroke-color);
+  }
+}
+
+.card-deal {
+  --bs-card-bg: #C3C7EC;
+  --bs-card-spacer-y: 20px;
+  --bs-card-spacer-x: 30px;
+  --bs-card-border-width: 0;
+  --bs-card-border-radius: 24px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../images/home/bg-deal.png');
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .mission-figure {
+    --caption-spacer-x: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card-saying {
+    --bs-card-font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mission-figure {
+    --caption-width: 200px;
+    --caption-spacer-x: 10px;
+  }
+
+  .card-saying {
+    --bs-card-font-size: 15px;
+  }
+
+  .card-deal {
+    --bs-card-spacer-y: 30px;
+    --bs-card-spacer-x: 50px;
+  }
+}

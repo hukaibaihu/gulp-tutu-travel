@@ -1,0 +1,83 @@
+//- layout.pug
+
+-
+  var menus = [
+    { text: 'Home', url: 'index.html' },
+    { text: 'Our story', url: 'aboutus.html' },
+    { text: 'Booking', url: '#' },
+    { text: 'Blog', url: '#' },
+    { text: 'Contact', url: 'contact.html' },
+    { text: 'Faq', url: 'faq.html' },
+  ];
+
+block vars
+
+html
+  head
+    meta(charset="utf-8")
+    meta(name="keywords" content="")
+    meta(name="description" content="")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no")
+
+    title #{navIndex > -1 ? menus[navIndex].text : navTitle} - Tutu Travel Limited
+
+    // Place favicon.ico in the root directory
+    link(rel="icon" type="image/x-icon" href="favicon.ico")
+    link(rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png")
+    link(rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png")
+
+    // build:css styles/vendor.css
+    link(rel="stylesheet" href="/node_modules/aos/dist/aos.css" type="text/css")
+    link(rel="stylesheet" href="/node_modules/swiper/swiper-bundle.min.css" type="text/css")
+    link(rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css")
+    link(rel="stylesheet" href="/node_modules/@fancyapps/ui/dist/fancybox/fancybox.css" type="text/css")
+    link(rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css" type="text/css")
+    // endbuild
+
+    // build:css styles/common.css
+    link(rel="stylesheet" href="styles/common.css")
+    // endbuild
+
+    block styles
+
+  body
+    <!--[if IE]>
+      p.browserupgrade You are using an #[strong outdated] browser. Please #[a(href="http://browsehappy.com/") upgrade your browser] to improve your experience.
+    <![endif]-->
+
+    include head.pug
+
+    block main
+
+    section.section.section-subscribe.d-md-none
+      .container
+        .mb-4.mb-lg-5.text-md-center.text-primary
+          h3.mb-2.mb-lg-3.fs-3.fw-semibold.text-capitalize(data-aos="fade-up")
+            | Subscribe  To Our Newsletter
+          p.mb-0 Sign up for special discounts and updates
+
+        form(autocomplete="off")
+          .mb-3
+            input.form-control.form-control-lg(type="email" placeholder="Email")
+
+          button.btn.btn-primary.btn-lg.w-100 Subscribe
+
+    include foot.pug
+
+    //- include modals.pug
+
+    // build:js scripts/vendor.js
+    script(type="text/javascript" src="/node_modules/aos/dist/aos.js")
+    script(type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js")
+    script(type="text/javascript" src="/node_modules/swiper/swiper-bundle.min.js")
+    script(type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js")
+    script(type="text/javascript" src="/node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js")
+    // endbuild
+
+    // build:js scripts/common.js
+    script(src="scripts/common.js")
+    // endbuild
+
+    block scripts

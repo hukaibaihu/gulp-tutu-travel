@@ -1,0 +1,48 @@
+//-
+  page index
+extends ./pugs/layout.pug
+
+block vars
+  - var navIndex = -1 //- 导航索引
+  - var navTitle = 'Send a request'
+
+block main
+  section.section.section-hero
+    .container
+      .card.border-0.rounded-5.bg-dark.text-light(data-aos="fade-up")
+        img.w-100.object-fit-cover(src="images/aboutus/hero.png" alt="Contact")
+        .card-img-overlay.d-flex.rounded-5
+          h3.mx-auto.my-auto.fs-3.fw-semibold
+            | Leave Your Details to Secure the Best Flight Prices!
+
+  section.section.section-contact.text-primary
+    .container
+      h3.mb-3.mb-md-4.mb-lg-5.fs-3.fw-semibold.text-capitalize(data-aos="fade-up")
+        | Send a request
+
+      form(autocomplete="off")
+        .mb-3(data-aos="fade-up")
+          label.form-label Your Name (required)
+          input.form-control.form-control-lg(type="text" name="name" placeholder="")
+
+        .mb-3(data-aos="fade-up")
+          label.form-label Your Email (required)
+          input.form-control.form-control-lg(type="email" name="email" placeholder="")
+
+        .mb-3(data-aos="fade-up")
+          label.form-label Travel Destination (from where to where)
+          textarea.form-control.form-control-lg(name="destination" placeholder="" rows="3")
+
+        .mb-3(data-aos="fade-up")
+          label.form-label Travel Date
+          textarea.form-control.form-control-lg(name="date" placeholder="" rows="3")
+
+        .mb-3(data-aos="fade-up")
+          label.form-label Any other request?
+          textarea.form-control.form-control-lg(name="other" placeholder="" rows="5")
+
+        p #[br]
+
+        p(data-aos="fade-up")
+          button.btn.btn-warning.btn-lg.px-4.rounded-pill.text-light.shadow(type="submit")
+            | Send Request
