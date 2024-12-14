@@ -214,6 +214,31 @@ block main
         h3.mb-0.fs-3.fw-semibold.text-capitalize(data-aos="fade-up")
           | Our Partners
 
+      .row.row-cols-3.row-cols-md-4.row-cols-lg-6.g-3.g-lg-4.g-xl-5.justify-content-center
+        -
+          var partners = [
+            'p_united.png',
+            'p_ethiopian.png',
+            'p_airpeace.png',
+            'p_klm.png',
+            'p_egyptair.png',
+            'p_taag.png',
+            'p_aircotedivoire.png',
+            'p_african.png',
+            'p_virgin.png',
+            'p_kenya.png',
+            'p_emirates.png',
+            'p_royalairmaroc.png',
+            'p_turkish.png',
+            'p_qatar.png',
+            'p_airfrance.png',
+            'p_lufthansa.png',
+            'p_rwandair.png',
+          ];
+
+        each partner in partners
+          .col.text-center(data-aos="fade-up")
+            img.img-fluid(src=`images/home/${partner}`)
 
   section.section.section-deal.d-none.d-md-block
     .container
@@ -225,10 +250,12 @@ block main
             p.mb-0
               | Stay one step ahead. Find the best value travel with the latest
               | deals, tips and news.
-          form(autocomplete="off")
+          form.needs-validation(autocomplete="off" novalidate)
             .d-flex.flex-column.flex-lg-row.gap-3.gap-lg-4.gap-xl-5
               .col
-                input.form-control.form-control-lg(type="email" placeholder="Enter email address")
+                input.form-control.form-control-lg(type="email" name="email" placeholder="Enter email address" required)
+                p.mb-0.invalid-feedback
+                  | Please enter your email!
               .col
                 button.btn.btn-primary.btn-lg.px-4 Subscribe
         .d-flex

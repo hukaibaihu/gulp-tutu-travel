@@ -6,13 +6,15 @@ block vars
   - var navIndex = 4 //- 导航索引
 
 block main
-  section.section.section-hero
-    .container
-      .card.border-0.rounded-5.bg-dark.text-light(data-aos="fade-up")
-        img.w-100.object-fit-cover(src="images/aboutus/hero.png" alt="Contact")
-        .card-img-overlay.d-flex.rounded-5
-          h3.mx-auto.my-auto.ff-baloo.fs-3
-            | Leave Your Details to Secure the Best Flight Prices!
+  section.section.section-hero.section-hero-sub
+    .container-md
+      .card.card-hero(data-aos="fade-up")
+        .ratio.ratio-16x9.ratio-md-21x9.ratio-lg-64x15
+          img.card-img.object-fit-cover(src="images/aboutus/hero.png" alt="Contact")
+        .card-img-overlay.d-flex.px-0
+          .container.mt-auto.my-md-auto.text-md-center
+            h3.mb-0.ff-baloo.fs-3
+              | Leave Your Details to Secure the Best Flight Prices!
 
   section.section.section-contact.text-primary
     .container
@@ -30,8 +32,7 @@ block main
               i.bi.bi-telephone-fill.fs-4.text-warning
             span.flex-fill.ms-2.mt-1.d-flex.flex-wrap.gap-3
               span +234 9035119068
-              span +234 09120223483
-              span +234 8160915493
+              span +234 9120223483
 
           p.d-flex.mb-3.mb-md-4(data-aos="fade-up")
             span.flex-shrink-0

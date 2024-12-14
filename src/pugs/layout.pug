@@ -58,11 +58,17 @@ html
             | Subscribe  To Our Newsletter
           p.mb-0 Sign up for special discounts and updates
 
-        form(autocomplete="off")
+        form.needs-validation(autocomplete="off" novalidate)
           .mb-3
-            input.form-control.form-control-lg(type="email" placeholder="Email")
+            input.form-control.form-control-lg(type="email" name="email" placeholder="Email" required)
+            p.mb-0.invalid-feedback
+              | Please enter your email!
 
           button.btn.btn-primary.btn-lg.w-100 Subscribe
+
+    a.btn.btn-whats(href="https://wa.me/+2349120223483?text=" target="_blank" data-aos="zoom-out" data-aos-offset="0")
+      i.bi.bi-whatsapp.fs-2
+      span.ms-2.d-none.d-md-inline “Need help? Chat with us now #[br] to book your holiday flight!”
 
     include foot.pug
 
